@@ -1,0 +1,33 @@
+main {
+    height: 100vh;
+    display: grid;
+    grid-gap: 20px;
+    /*numero de Columnas 4 */
+    grid-template-columns: 100px 100px 100px 100px;
+    /*numero de filas 3 */
+    grid-template-rows: 100px 100px 100px;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: goldenrod;
+}
+
+@media (max-width: 600px) {
+    div:nth-child(10) {
+        background-color: purple;
+        /*    grid-column-start: 3;
+            grid-column-end: 5*/;
+        grid-column: 3 / 5;
+    }
+
+    div:nth-child(6) {
+        background-color: purple;
+    /*Desde la columna 2 a la 3 */
+        grid-column: 2 / 3;
+    /*Desde la fila 2 a la 4 */
+        grid-row: 2 / 4;
+    }
+}
